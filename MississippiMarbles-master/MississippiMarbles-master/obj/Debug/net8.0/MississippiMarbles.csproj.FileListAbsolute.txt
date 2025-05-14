@@ -1,0 +1,15 @@
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\bin\Debug\net8.0\MississippiMarbles.exe
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\bin\Debug\net8.0\MississippiMarbles.deps.json
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\bin\Debug\net8.0\MississippiMarbles.runtimeconfig.json
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\bin\Debug\net8.0\MississippiMarbles.dll
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\bin\Debug\net8.0\MississippiMarbles.pdb
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\obj\Debug\net8.0\MississippiMarbles.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\obj\Debug\net8.0\MississippiMarbles.AssemblyInfoInputs.cache
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\obj\Debug\net8.0\MississippiMarbles.AssemblyInfo.cs
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\obj\Debug\net8.0\MississippiMarbles.csproj.CoreCompileInputs.cache
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\obj\Debug\net8.0\MississippiMarbles.sourcelink.json
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\obj\Debug\net8.0\MississippiMarbles.dll
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\obj\Debug\net8.0\refint\MississippiMarbles.dll
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\obj\Debug\net8.0\MississippiMarbles.pdb
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\obj\Debug\net8.0\MississippiMarbles.genruntimeconfig.cache
+C:\Users\apatrick\Projects\CodingKatas\RepositoryForCodingKatas\MississippiMarbles-master\MississippiMarbles-master\obj\Debug\net8.0\ref\MississippiMarbles.dll
