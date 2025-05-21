@@ -14,7 +14,7 @@ namespace MississippiMarbles.Classes
 		public List<int> dice = new List<int>();
 		public List<int>? selectedDice;
 		public int pointsScored = 0;
-
+		public int s;
 		public enum Concepts
 		{
 			ONE, FIVE, STRAIGHT, TOK1, TOK2, TOK3, TOK4, TOK5, TOK6, FROK, FVOK, SOK
