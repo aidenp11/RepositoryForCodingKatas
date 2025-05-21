@@ -35,3 +35,6 @@ MississippiMarbles-master/MississippiMarbles-master/.vs/MississippiMarbles/FileC
 MississippiMarbles-master/MississippiMarbles-master/.vs/MississippiMarbles/FileContentIndex/5561cb1e-d255-4ff3-b2fc-c571a3992982.vsidx
 MississippiMarbles-master/MississippiMarbles-master/.vs/MississippiMarbles/FileContentIndex/b188dbc6-d040-4770-bd5c-56ca13b75822.vsidx
 MississippiMarbles-master/MississippiMarbles-master/.vs/MississippiMarbles/FileContentIndex/dcb427b4-ddaf-4d86-aecd-4e74e01ec283.vsidx
+*.db-wal
+*.vsidx
+*.db-wal
