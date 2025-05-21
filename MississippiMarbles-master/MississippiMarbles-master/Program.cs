@@ -129,18 +129,7 @@ while (preGame)
 
 while (game)
 {
-	Game g = new Game(players, turn);
+	Game g = Game.GetInstance(players);
 	Console.WriteLine(players.ElementAt(g.winnerTurn).getPlayerName + " won the game!");
 	game = false;
 }
-
-//Console.WriteLine("Please enter player name!");
-//string name = Console.ReadLine();
-//Player player = new Player(name);
-//player.addToPot(6);
-//player.addToPot(3);
-//player.addToPot(4);
-//player.addToPot(1);
-//Console.WriteLine(player.getPlayerName
-//+ "\n" + player.getPoints 
-//+ "\n" + player.getSavedDice());
