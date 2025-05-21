@@ -1,0 +1,62 @@
+*   [33m087d905[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge branch 'CodingKata2'
+[31m|[m[32m\[m  
+[31m|[m * [33mc9912c1[m[33m ([m[1;31morigin/CodingKata2[m[33m, [m[1;32mCodingKata2[m[33m)[m roll 2
+[31m|[m * [33m1880230[m roll
+* [32m|[m [33m87fa277[m Merge branch 'CodingKata2'
+[33m|[m[32m\[m[32m|[m 
+[33m|[m * [33m5e0a7ec[m Remove ignored files (build artifacts, VS metadata) from version control
+[33m|[m * [33m37e1bd9[m gignore
+[33m|[m * [33ma6319c0[m fffffffffffff
+[33m|[m * [33m0f22001[m bs
+[33m|[m * [33mcb7d9e9[m yes sure
+[33m|[m * [33mf04f399[m gignore db wal
+[33m|[m * [33m3220678[m better
+[33m|[m * [33m94810ce[m fuck you
+* [34m|[m [33mf4e0c3e[m Remove ignored files (build artifacts, VS metadata) from version control
+* [34m|[m [33mda5f8ec[m new gignore
+* [34m|[m [33m7776896[m why the fucking shit
+* [34m|[m [33ma980cbe[m gignore db wal
+* [34m|[m [33mf83177d[m no
+* [34m|[m [33mcdbeb29[m f
+* [34m|[m [33me214675[m fuck you
+[35m|[m[34m\[m[34m|[m 
+[35m|[m * [33m80ece84[m gignore
+[35m|[m * [33m2fe451f[m gignore
+* [36m|[m [33m2f3f7cd[m gignore part a million
+* [36m|[m   [33m96c60c9[m Merge branch 'main' of https://github.com/aidenp11/RepositoryForCodingKatas
+[1;31m|[m[1;32m\[m [36m\[m  
+[1;31m|[m * [36m|[m [33m7546f1e[m Merge pull request #2 from aidenp11/CodingKata2
+[1;31m|[m [1;33m|[m[36m\[m[36m|[m 
+[1;31m|[m [1;33m|[m * [33m35be1ab[m gignore
+[1;31m|[m [1;33m|[m * [33m8a714af[m fix roll
+[1;31m|[m [1;33m|[m * [33m1100332[m observer pattern
+[1;31m|[m [1;33m|[m * [33m799a0af[m changes
+[1;31m|[m [1;33m|[m[1;33m/[m  
+* [1;33m/[m [33mc8a8eb8[m gignore
+[1;33m|[m[1;33m/[m  
+* [33m1555469[m gignore
+*   [33m15d4acd[m Merge pull request #1 from aidenp11/CodingKata1
+[1;35m|[m[1;36m\[m  
+[1;35m|[m [1;36m|[m * [33m74bb2a0[m[33m ([m[1;31morigin/CodingKata1[m[33m, [m[1;32mCodingKata1[m[33m)[m Update .gitignore
+[1;35m|[m [1;36m|[m * [33mef5d72a[m fff
+[1;35m|[m [1;36m|[m *   [33mc7da237[m Merge branch 'CodingKata1' of https://github.com/aidenp11/RepositoryForCodingKatas into CodingKata1
+[1;35m|[m [1;36m|[m [32m|[m[1;36m\[m  
+[1;35m|[m [1;36m|[m [32m|[m[1;36m/[m  
+[1;35m|[m [1;36m|[m[1;36m/[m[32m|[m   
+[1;35m|[m * [32m|[m   [33m8ae10ac[m Merge branch 'main' into CodingKata1
+[1;35m|[m [34m|[m[1;35m\[m [32m\[m  
+[1;35m|[m [34m|[m[1;35m/[m [32m/[m  
+[1;35m|[m[1;35m/[m[34m|[m [32m|[m   
+* [34m|[m [32m|[m [33mc16dc23[m gignore
+* [34m|[m [32m|[m [33mfee709f[m ignore
+[35m|[m [34m|[m * [33m9106007[m gith
+[35m|[m [34m|[m[34m/[m  
+[35m|[m * [33maf1e79b[m git hignore
+[35m|[m * [33m0c2f1e3[m singleton for game class
+[35m|[m[35m/[m  
+* [33m44cd942[m sure
+* [33m1173536[m Mississipi Marbles setup
+* [33mc01e338[m Mississipi Marbles Code added to repository
+* [33m1a2bf99[m Update README.md
+* [33m8e2626d[m Update README.md
+* [33mbd28b3d[m Initial commit
