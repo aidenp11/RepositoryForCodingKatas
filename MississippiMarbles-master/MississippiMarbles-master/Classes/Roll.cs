@@ -1,39 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics.Metrics;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using MississippiMarbles.Classes;
-using static System.Formats.Asn1.AsnWriter;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using MississippiMarbles.Interfaces;
 
 namespace MississippiMarbles.Classes
 {
-	internal class Roll(Player playerTurn)
+	internal class Roll
 	{
-		Player player = playerTurn;
+		private readonly List<IGameObserver> _observers;
+		Player player;
 		public int pointsToAdd;
 		public List<int> dice = new List<int>();
 		public List<int>? selectedDice;
 		public int pointsScored = 0;
+
 		public enum Concepts
 		{
-			ONE,
-			FIVE,
-			STRAIGHT,
-			TOK1,
-			TOK2,
-			TOK3,
-			TOK4,
-			TOK5,
-			TOK6,
-			FROK,
-			FVOK,
-			SOK
+			ONE, FIVE, STRAIGHT, TOK1, TOK2, TOK3, TOK4, TOK5, TOK6, FROK, FVOK, SOK
 		}
+
+		public Roll(Player playerTurn, List<IGameObserver> observers)
+		{
+			player = playerTurn;
+			_observers = observers;
+		}
+
+
+		#region Observer Pattern
+		private void NotifyPlayerRoll()
+		{
+			foreach (var observer in _observers)
+				observer.onPlayerRoll(player, this);
+		}
+
+		private void NotifyPlayerChoice()
+		{
+			foreach (var observer in _observers)
+				observer.onPlayerChoice(player, this);
+		}
+
+		#endregion
 
 		public void TryOpen(int diceNum)
 		{
@@ -44,15 +51,12 @@ namespace MississippiMarbles.Classes
 			List<Concepts> possibilities = new List<Concepts>();
 			for (int i = 0; i < diceNum; i++)
 			{
-				roll = r.Next(1, 7);
+				roll = r.Next(1, 3);
 				dice.Add(roll);
 			}
-			for (int i = 0; i < dice.Count; i++)
-			{
-				if (i == 0) Console.WriteLine("Dice rolled: ");
-				Console.Write(dice.ElementAt(i) + " ");
-				if (i == dice.Count - 1) Console.WriteLine('\n');
-			}
+
+			NotifyPlayerRoll();
+
 			if (DiceFlood(dice))
 			{
 				Console.WriteLine("Dice Flood! You've lost all your points!\n");
@@ -98,7 +102,8 @@ namespace MississippiMarbles.Classes
 						choosingDice = false;
 						player.turn = false;
 						return;
-					} else if (possibilities.Count <= 0)
+					}
+					else if (possibilities.Count <= 0)
 					{
 						Console.WriteLine("All choices chosen, turn over\n");
 						choosingDice = false;
@@ -312,12 +317,7 @@ namespace MississippiMarbles.Classes
 
 		public void DisplayDiceAgain()
 		{
-			for (int i = 0; i < dice.Count; i++)
-			{
-				if (i == 0) Console.WriteLine("Dice rolled: ");
-				Console.Write(dice.ElementAt(i) + " ");
-				if (i == dice.Count - 1) Console.WriteLine('\n');
-			}
+			NotifyPlayerChoice();
 		}
 
 
@@ -365,7 +365,7 @@ namespace MississippiMarbles.Classes
 				}
 			}
 		}
-		
+
 		public bool DiceFlood(List<int> dice)
 		{
 			int floodCount = 0;

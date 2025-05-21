@@ -1,4 +1,5 @@
 ﻿using MississippiMarbles.Classes;
+using MississippiMarbles.Interfaces;
 
 bool preGame = true;
 bool game = false;
@@ -129,7 +130,12 @@ while (preGame)
 
 while (game)
 {
-	Game g = Game.GetInstance(players);
-	Console.WriteLine(players.ElementAt(g.winnerTurn).getPlayerName + " won the game!");
-	game = false;
+    Game g = Game.GetInstance(players);
+
+    g.AddObserver(new IConsoleGameObserver());
+    g.AddObserver(new IStatisticsGameObserver());
+
+    g.Start(); 
+
+    game = false;
 }

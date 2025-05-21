@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MississippiMarbles.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,10 +14,42 @@ namespace MississippiMarbles.Classes
 		private int _turn;
 		public int winnerTurn;
 
+		#region Observer Pattern
+		private readonly List<IGameObserver> _observers = new();
+
+		public void AddObserver(IGameObserver observer)
+		{
+			if (!_observers.Contains(observer))
+				_observers.Add(observer);
+		}
+
+		public void RemoveObserver(IGameObserver observer)
+		{
+			_observers.Remove(observer);
+		}
+
+		private void NotifyGameEnd(Player winner)
+		{
+			foreach (var observer in _observers)
+				observer.onGameEnd(winner);
+		}
+
+		private void NotifyPointsChanged(Player player, int oldPoints, int newPoints)
+		{
+			foreach (var observer in _observers)
+				observer.onPointsChanged(player, oldPoints, newPoints);
+		}
+
+		#endregion
+
 		private Game(List<Player> players)
 		{
 			_players = players;
 			_turn = 0;
+		}
+
+		public void Start()
+		{
 			StartGameLoop();
 		}
 
@@ -62,10 +95,11 @@ namespace MississippiMarbles.Classes
 						}
 						else
 						{
+							int oldPoints = player.getPoints;
 							player.setPoints(player.getPoints + player.pointsToAdd);
 							Console.WriteLine("\n*** Turn Summary ***");
 							Console.WriteLine("Player's total score for this turn: " + player.pointsToAdd);
-							Console.WriteLine("Player's updated score: " + player.getPoints);
+							NotifyPointsChanged(player, oldPoints, player.getPoints);
 							Console.WriteLine("\n*** End of Turn ***\n");
 							break;
 						}
@@ -86,7 +120,7 @@ namespace MississippiMarbles.Classes
 						switch (option)
 						{
 							case 1:
-								roll = new Roll(player);
+								roll = new Roll(player, _observers); 
 								roll.TryOpen(player.diceNum);
 								break;
 
@@ -98,8 +132,12 @@ namespace MississippiMarbles.Classes
 								}
 								else
 								{
+									int oldPoints = player.getPoints;
 									player.setPoints(player.getPoints + player.pointsToAdd);
-									Console.WriteLine("Player score is now " + player.getPoints + '\n');
+									Console.WriteLine("\n*** Turn Summary ***");
+									Console.WriteLine("Player's total score for this turn: " + player.pointsToAdd);
+									NotifyPointsChanged(player, oldPoints, player.getPoints);
+									Console.WriteLine("\n*** End of Turn ***\n");
 									player.turn = false;
 								}
 								break;
@@ -119,6 +157,7 @@ namespace MississippiMarbles.Classes
 				{
 					winnerTurn = _turn;
 					gameEnded = true;
+					NotifyGameEnd(player);
 				}
 
 				_turn = (_turn + 1) % _players.Count;
