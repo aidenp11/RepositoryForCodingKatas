@@ -51,7 +51,7 @@ namespace MississippiMarbles.Classes
 			List<Concepts> possibilities = new List<Concepts>();
 			for (int i = 0; i < diceNum; i++)
 			{
-				roll = r.Next(1, 3);
+				roll = r.Next(1, 1);
 				dice.Add(roll);
 			}
 

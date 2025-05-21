@@ -16,7 +16,11 @@ namespace MississippiMarbles.Interfaces
             if (!_rollCounts.ContainsKey(player.getPlayerName))
                 _rollCounts[player.getPlayerName] = 0;
             _rollCounts[player.getPlayerName]++;
-        }
+
+			if (!_choiceCounts.ContainsKey(player.getPlayerName))
+				_choiceCounts[player.getPlayerName] = 0;
+			_choiceCounts[player.getPlayerName]++;
+		}
 
         public void onPlayerChoice(Player player, Roll roll)
         {
