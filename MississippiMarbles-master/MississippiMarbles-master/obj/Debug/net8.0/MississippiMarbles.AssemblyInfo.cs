@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MississippiMarbles")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+322067828878f02dfb6c51d603516b8a869f71da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f04f399f4693b9697a5826a1ae717b0da201aad6")]
 [assembly: System.Reflection.AssemblyProductAttribute("MississippiMarbles")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MississippiMarbles")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
