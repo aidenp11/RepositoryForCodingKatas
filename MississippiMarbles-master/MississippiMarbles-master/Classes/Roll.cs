@@ -8,7 +8,7 @@ namespace MississippiMarbles.Classes
 {
 	internal class Roll
 	{
-		private readonly List<IGameObserver> _observers;
+		private readonly IGameMediator _mediator;
 		Player player;
 		public int pointsToAdd;
 		public List<int> dice = new List<int>();
@@ -19,27 +19,21 @@ namespace MississippiMarbles.Classes
 			ONE, FIVE, STRAIGHT, TOK1, TOK2, TOK3, TOK4, TOK5, TOK6, FROK, FVOK, SOK
 		}
 
-		public Roll(Player playerTurn, List<IGameObserver> observers)
+		public Roll(Player playerTurn, IGameMediator mediator)
 		{
 			player = playerTurn;
-			_observers = observers;
+			_mediator = mediator;
 		}
 
-
-		#region Observer Pattern
 		private void NotifyPlayerRoll()
 		{
-			foreach (var observer in _observers)
-				observer.onPlayerRoll(player, this);
+			_mediator.NotifyPlayerRoll(player, this);
 		}
 
 		private void NotifyPlayerChoice()
 		{
-			foreach (var observer in _observers)
-				observer.onPlayerChoice(player, this);
+			_mediator.NotifyPlayerChoice(player, this);
 		}
-
-		#endregion
 
 		public void TryOpen(int diceNum)
 		{
@@ -177,7 +171,7 @@ namespace MississippiMarbles.Classes
 							else if (possibilities.ElementAt(option - 1) == Concepts.STRAIGHT)
 							{
 								player.diceNum -= 6;
-								player.setPoints(2000);
+								player.pointsToAdd += 2000;
 								Console.WriteLine("Straight chosen\n");
 								choosingDice = false;
 
@@ -247,7 +241,6 @@ namespace MississippiMarbles.Classes
 								player.diceNum -= 3;
 								player.pointsToAdd += 600;
 								Console.WriteLine("3 sixes chosen\n");
-								dice.Remove(6);
 								dice.Remove(6);
 								dice.Remove(6);
 								dice.Remove(6);
